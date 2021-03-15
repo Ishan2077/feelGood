@@ -1,0 +1,123 @@
+#:kivy 1.0
+<LoginScreen>:
+    GridLayout:
+        cols: 1
+        GridLayout:
+            cols: 1
+            padding: 15, 15
+            spacing: 20, 20
+            Label:
+                text: "Welcome! Please Login to proceed"
+                font_size: '20sp' #space independent pixels
+            TextInput:
+                id: username
+                hint_text: "Username"
+                #font_size: '20sp'
+                #size_hint: 0.5, 0.3
+                pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+            TextInput:
+                id: password
+                password: True
+                hint_text: "Password"
+            RelativeLayout:
+                Button:
+                    text: "Login"
+                    on_press: root.login(root.ids.username.text, root.ids.password.text)
+                    size_hint: 0.3, 0.5
+                    pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+                Label:
+                    id: login_wrong
+                    text: ""
+
+
+        GridLayout:
+            cols: 2
+            size_hint: 0.2, 0.2  #for 20% Space on screen
+            padding: 10, 10
+            spacing: 10, 0
+            Button:
+                text: "Forgot Password?"
+                background_color: 0.4, 0.5, 0.2, 0 #This is RGB value: value b/w 0 and 1 ONLY.
+                opacity: 1 if self.state == 'normal' else 0.5
+                color: 0.1,0.7, 1, 1
+            Button:
+                background_color: 1, 1, 1, 0 #This is RGB value: value b/w 0 and 1 ONLY.
+                opacity: 1 if self.state == 'normal' else 0.5
+                color: 0.6,0.8, 0.7, 1 # red value, green value, blue value, transparency value --> (0.1, 0.7,1,1)
+                text: "Sign Up"
+                on_press: root.sign_up()
+
+<SignUpScreen>:
+    GridLayout:
+        cols: 1
+        padding: 20, 20
+        spacing: 20, 20
+        Label:
+            text: "Sign Up to continue and get all latest notifications!"
+        TextInput:
+            id: username
+            hint_text: "Name"
+        TextInput:
+            id: country
+            hint_text: "Country"
+        TextInput:
+            id: password
+            password: True
+            hint_text: "Password"
+        TextInput:
+            id: contact
+            hint_text: "Contact Number"
+        Button:
+            text: "Continue"
+            on_press: root.add_user(root.ids.username.text, root.ids.country.text, root.ids.password.text, root.ids.contact.text) #use .text to access of the details you mentioned in those boxes: username etc.
+            #root above refers to 'SignUpScreen'
+            #class id's are the properties of the SignUpScreen object, which comes from the screen.
+
+<SignUpScreenSuccess>:
+    GridLayout:
+        cols: 1
+        Label:
+            text: "Sign Up Successful!"
+        Button: 
+            text: "Login Page"
+            on_press: root.go_to_login()
+            size_hint: 0.3, 0.5
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+<LoginScreenSuccess>:
+    GridLayout:
+        cols: 1
+        padding: 30,30
+        spacing: 30,30
+        RelativeLayout:
+            ImageButton:
+                on_press: root.log_out()
+                source: 'logout_hover.png' if self.hovered else "logout_nothover.png"
+                size_hint: 0.6,0.5
+                pos_hint: {'center_x': 0.8, 'center_y': 0.8}
+        Label:
+            text: "How do you feel at the moment?"
+        TextInput:
+            id: feeling
+            hint_text: "Do you feel joyous, sad or not sure what you've been feeling. Please type here..."
+        Button:
+            text: "Enlighten Me!"
+            on_press: root.get_quote(root.ids.feeling.text)
+        ScrollView:
+            Label:
+                id: quote
+                text: ""
+                text_size: self.width, None
+                size_hint_y: None #fixed size of text when size of screen is decreased.
+                height: self.texture_size[1] #THIS IS A TUPLE .height below the label
+
+
+<RootWidget>:
+    LoginScreen:
+        name: "login_screen"
+    SignUpScreen:
+        name: "sign_up_screen"
+    SignUpScreenSuccess:
+        name: "sign_up_screen_success"
+    LoginScreenSuccess:
+        name: "login_screen_success"
