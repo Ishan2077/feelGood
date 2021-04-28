@@ -13,6 +13,7 @@ The easiest way to install Kivy is with pip, which installs Kivy using either a 
 
 Kivy provides pre-compiled wheels for the supported Python versions on Windows, OS X, Linux, and RPi. Alternatively, installing from source is required for newer Python versions not listed above or if the wheels do not work or fail to run properly.
 
+
 Setup terminal and pip
 Before Kivy can be installed, Python and pip needs to be pre-installed. Then, start a new terminal that has Python available. In the terminal, update pip and other installation dependencies so you have the latest version as follows (for linux users you may have to substitute python3 instead of python and also add a --user flag in the subsequent commands outside the virtual environment):
 
