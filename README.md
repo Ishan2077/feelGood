@@ -1,6 +1,6 @@
 # feelGood
-Elevate your mood!
- You can install the Project's files and can use IDE of your choice.
+<h2> Elevate your mood!</h2>
+
  
  NOTE: Please make sure Python 3.x is installed in your system!
  
