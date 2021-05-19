@@ -7,7 +7,7 @@ Elevate your mood!
  It is preferred to use Visual Studio Code here.
  To run the project, go to: https://kivy.org/#home
  
- Now you can go to https://kivy.org/doc/stable/gettingstarted/installation.html and from there, search for, <b>Using pip</b>
+ Now you can go to https://kivy.org/doc/stable/gettingstarted/installation.html and from there, search for, <b>Using pip</b><br>
 The easiest way to install Kivy is with pip, which installs Kivy using either a pre-compiled wheel, if available, otherwise from source (see below).
 
 Kivy provides pre-compiled wheels for the supported Python versions on Windows, OS X, Linux, and RPi. Alternatively, installing from source is required for newer Python versions not listed above or if the wheels do not work or fail to run properly.
@@ -24,7 +24,7 @@ Create a new virtual environment for your Kivy project. A virtual environment wi
 Create the virtual environment named kivy_venv in your current directory:
 
 ``` python -m virtualenv kivy_venv ```
-Activate the virtual environment. You will have to do this step from the current directory every time you start a new terminal. This sets up the environment so the new kivy_venv Python is used.
+<br>Activate the virtual environment. You will have to do this step from the current directory every time you start a new terminal. This sets up the environment so the new kivy_venv Python is used.
 
 <b>For Windows default CMD, in the command line do</b>:
 
