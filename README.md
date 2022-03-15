@@ -2,7 +2,7 @@
 <h2> Elevate your mood!</h2>
 
  
- NOTE: Please make sure Python 3.x is installed in your system!
+ **NOTE: Please make sure Python 3.x is installed in your system!**
  
  It is preferred to use Visual Studio Code here.
  To run the project, go to: https://kivy.org/#home
@@ -48,3 +48,7 @@ The simplest is to install the current stable version of kivy and optionally kiv
 ```python -m pip install kivy[base] kivy_examples```
 
 <i>This also installs the minimum dependencies of Kivy. To additionally install Kivy with audio/video support, install either kivy[base,media] or kivy[full]. </i>
+
+
+**_UPDATE
+The Android version of Feel Good Application is coming exclusively to Android devices, with revamped animations, more fluid Sign In and Log In screens, a brand new name, update to the input and much more!_**
