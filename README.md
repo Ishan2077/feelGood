@@ -50,5 +50,4 @@ The simplest is to install the current stable version of kivy and optionally kiv
 <i>This also installs the minimum dependencies of Kivy. To additionally install Kivy with audio/video support, install either kivy[base,media] or kivy[full]. </i>
 
 
-**_UPDATE
-The Android version of Feel Good Application is coming exclusively to Android devices, with revamped animations, more fluid Sign In and Log In screens, a brand new name, update to the input and much more!_**
+**This space will be updated with new additions, features, UI Enhancements & more**
